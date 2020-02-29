@@ -1,0 +1,27 @@
+---
+title: "Clase_6"
+author: "Paula Rozo Coy"
+date: "28/2/2020"
+output: 
+    word_document:
+        reference_docx: docx_template.docx
+bibliography: refs.bib
+link-citations: yes
+csl: apa-no-issue-numbers.csl
+    
+---
+
+csl : citation as a language
+
+
+# INtroduccion TFM
+
+
+Tras revisar la referenica @IPCC2018 y @Johnstone2016
+
+Ademas puede ser que queramos incluir una seccion especifica de referencias que no este al final del documento  porque luego tenga otras partes como apendice 
+
+
+<div id="refs"></div>
+
+Entonces podemos seguir escribiendo y se tendrian quehaber insertado las referencias.
