@@ -1,0 +1,65 @@
+---
+title: "Practica 02"
+author: "Paula Rozo Coy - Pablo Aguilera Capitan"
+date: "29/2/2020"
+output: 
+    word_document: 
+        reference_docx: docx_template_01.docx
+bibliography: refs.bib
+link-citations: yes
+csl: apa-no-issue-numbers.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Practica 2 - GitHub y Ciencia Reproducible  
+
+
+# OBJETIVO GENERAL  
+
+Evidenciar los conocimientos adquiridos relacionados principalmente con el funcionamiento de la libreria R Markdown.
+
+# OBJETIVOS ESPECIFICOS  
+
++ Reconocer la importancia de la reproducibilidad de la ciencia y los elementos del flujo de trabajo reproducible a traves de la comprension del articulo __Ciencia reproducible: qué, por qué, cómo__.  
+
++ Hacer uso del repositorio GitHub y entender su importancia principalmente en el control de versiones y trabajo integrado por medio del articulo __¿Porqué usar GitHub' Diez pasos para disfrutar de GitHub y no morir en el intento__.  
+
++ Desarrollar ligeresa en el uso de los diferentes argumentos de R Markdown para la configuracion de lo que se desea mstrar tanto de texto como de codigo en el documento de salida final.  
+
+
+# DESARROLLO DE LA PRACTICA  
+
+Para el desarrollo de la presente practica se utiliza el lenguaje de programación R Core Team (2019), y el documento se genera haciendo uso de la librería R Markdown. Cabe resaltar que tanto la portada, el encabezado y el pie de pagina se ajustan en el documento final de word previo a exportarlo como PDF.
+
+En primer lugar se crea un documento en word nombrado __docx_template_01__ en el que se configura todo el estilo del documento de salida, adicional a esto se incluyen las referencias de los dos articulos propuestos por la guia en el archivo de texto __refs.bib__.  
+
++ ***Articulo Ciencia reproducible: qué, por qué, cómo. ***  
+
+En este apartado se dara respuesta a las preguntas planetadas en la guia en relación al articulo en mención.
+
++ ¿ Que es la ciencia reproducible?  
+
+La ciencia reproducible hace referencia a la posibilidad de replicar el mismo estudio con nuevos datos, es decir, haciendo uso de los mismos modelos estadisticos, mismos calculos, y obteniendo en teoria la misma cantidad de resultados representados en el mismo numero de tablas y figuras. Sin embargo, hoy en dia la mayoria de los articulos y documentos cientificos no son reproducibles dado que trazar de una manera clara el proceso de obtencion de los resultados resulta bastante complicado si no se cuenta con con un codigo - __Scripts__ - que permita la reproducibilidad de los mismos.
+
++ ¿En que casos se consigue 100% de la reprodicibilidad?  
+
++ ¿Cuales de los beneficios que se sugieren son considerados mas importantes paranosotros como equipo de trabajo?  
+
++ ¿Porque no hace todo el mundo ciencia reproducible?  
+
++ ***Articulo ¿ Por qué usar GitHub? Diez pasos para disfrutar de GitHUb y no morir en el intento. ***
+
+En este apartado se tratara de comprobar que quedaron claros los conceptos mas importantes asociados al respositorio GitHub y como evidencia del uso y la correcta implementacion del mismo, el script de este documento puede descargarse del siguiente link 
+
+PABLOOOOOOOOOOOOOO AQUI VA LO TUYO 
+
+
+
+
+
+
+
+ 
