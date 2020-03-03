@@ -2,13 +2,15 @@
 title: "Practica 02"
 author: "Paula Rozo Coy - Pablo Aguilera Capitan"
 date: "29/2/2020"
-output: 
-    word_document: 
-        reference_docx: docx_template_01.docx
-bibliography: refs.bib
+output:
+  word_document:
+    reference_docx: docx_template_01.docx
+  pdf_document: default
 link-citations: yes
 csl: apa-no-issue-numbers.csl
+bibliography: refs.bib
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,39 +29,177 @@ Evidenciar los conocimientos adquiridos relacionados principalmente con el funci
 
 + Hacer uso del repositorio GitHub y entender su importancia principalmente en el control de versiones y trabajo integrado por medio del articulo __¿Porqué usar GitHub' Diez pasos para disfrutar de GitHub y no morir en el intento__.  
 
-+ Desarrollar ligeresa en el uso de los diferentes argumentos de R Markdown para la configuracion de lo que se desea mstrar tanto de texto como de codigo en el documento de salida final.  
++ Desarrollar ligereza en el uso de los diferentes argumentos de R Markdown para la configuracion de lo que se desea mostrar tanto de texto como de codigo en el documento de salida final.  
 
 
 # DESARROLLO DE LA PRACTICA  
 
-Para el desarrollo de la presente practica se utiliza el lenguaje de programación R Core Team (2019), y el documento se genera haciendo uso de la librería R Markdown. Cabe resaltar que tanto la portada, el encabezado y el pie de pagina se ajustan en el documento final de word previo a exportarlo como PDF.
+Para el desarrollo de la presente practica se utiliza el lenguaje de programación R Core Team (2019), y el documento se genera haciendo uso de la librería R Markdown. Cabe resaltar que tanto la portada se ajusta en el documento final de word previo a exportarlo como PDF.
 
-En primer lugar se crea un documento en word nombrado __docx_template_01__ en el que se configura todo el estilo del documento de salida, adicional a esto se incluyen las referencias de los dos articulos propuestos por la guia en el archivo de texto __refs.bib__.  
+En primer lugar se crea un documento en word nombrado __docx_template_01__ en el que se configura todo el estilo del documento de salida incluyendo encabezado y pie de pagina, adicional a esto se incluyen las referencias de los dos articulos propuestos por la guia en el archivo de texto __refs.bib__.  
 
-+ ***Articulo Ciencia reproducible: qué, por qué, cómo. ***  
++ **Articulo Ciencia reproducible: qué, por qué, cómo.**  
 
 En este apartado se dara respuesta a las preguntas planetadas en la guia en relación al articulo en mención.
-
-+ ¿ Que es la ciencia reproducible?  
+   
+   + ¿ Que es la ciencia reproducible?    
 
 La ciencia reproducible hace referencia a la posibilidad de replicar el mismo estudio con nuevos datos, es decir, haciendo uso de los mismos modelos estadisticos, mismos calculos, y obteniendo en teoria la misma cantidad de resultados representados en el mismo numero de tablas y figuras. Sin embargo, hoy en dia la mayoria de los articulos y documentos cientificos no son reproducibles dado que trazar de una manera clara el proceso de obtencion de los resultados resulta bastante complicado si no se cuenta con con un codigo - __Scripts__ - que permita la reproducibilidad de los mismos.
 
-+ ¿En que casos se consigue 100% de la reprodicibilidad?  
+  + ¿En que casos se consigue 100% de la reprodicibilidad?  
 
-+ ¿Cuales de los beneficios que se sugieren son considerados mas importantes paranosotros como equipo de trabajo?  
+Aunque dificilmente se pueda conseguir 100% de la roproducibilidad de un estudio, el texto menciona una serie de elementos que conforma la transicion hacia la reproducibilidad, la utilizacion inicial de un codigo ("scripts") para el análisis de los datos, repositorios de datos en nube para almacenar, versionar y compratir los datos, la estructuración de un documento dinamico haciendo uso de herramientas como Rmarkdown o Ipython, y finalmenye la incorporacion a un repositorio para conservar un resgistro del desarrollo del proyecto y facilitar la participacion, en este prden respectivamente, puede llegar a ser el flujo dinamico antes mencionado para lograr una plena reproducibilidad de la ciencia. Lo mas complejo en todos estos casos es contar con el manejo de estas herramientas en los diferentes campos de la ciencia.
 
-+ ¿Porque no hace todo el mundo ciencia reproducible?  
+  + ¿Cuales de los beneficios que se sugieren son considerados mas importantes para nosotros como equipo de trabajo?  
 
-+ ***Articulo ¿ Por qué usar GitHub? Diez pasos para disfrutar de GitHUb y no morir en el intento. ***
+Creemos que los beneficios enumerados por los autores del articulo estan todos interrelacionados de algun modo, sin embargo, hay dos de estos que consideramos resaltan y denotan la importania de realizar ciencia reproducible, el primero es que **"La utilización de código permite la automatización: ejecución de tareas repetitivas sin esfuerzo"**, este sin duda permite reproducir los mismos calculos y analisis no solo reduciendo el esfuerzo si no asegurando que los cambios que se dan en los resultados por el cambio de metodologias utilizadas incluso con los mismos datos se reduzca completamente, adicional a esto es importante mencionar que la automatizacion de la lectura de datos permite analizarlos incluso cuando no se tiene una comprension del 100% de la metodologia utilizada, lo que hace a la ciencia mas accesible y al alcance de todas las areas de estudio. En segundo lugar se considra dentro de estos beneficios la **"Reducción drástica del riesgo de errores"**, en primer lugar porque auqnue no se garaniza que los resultados obtenidos una vez se replica el estudio sean correctos si evita que se sumen mas errores a los ya existentes, es decir indiferente al numero de veces que se replique el estudio no se existen errores acumulados por otro lado como lo menciona el texto se abren nuevas lineas de colaboración y permite que los erreres existentes tengan la oportunidad de ser corregidos mas rapidamente por alguien que sea aaun mas experto en el tema en cuestión.
 
-En este apartado se tratara de comprobar que quedaron claros los conceptos mas importantes asociados al respositorio GitHub y como evidencia del uso y la correcta implementacion del mismo, el script de este documento puede descargarse del siguiente link 
+  + ¿Porque no hace todo el mundo ciencia reproducible?  
 
-PABLOOOOOOOOOOOOOO AQUI VA LO TUYO 
+Como bien lo menciona @rodriguez2016ciencia, desarrollar estudios plenamente reproducibles implica un esfuerzo incial adicional de aprendizaje de diferentes areas de estudio, como lo son el manejo de lenguajes de programación, de bases de datos, de repositorios entre otras cosas, y este esfuerzo implica dedicar un tiempo considerable a aprender diciplinas que a la largar pueden no traer un beneficio economico para quien las aprende y muy por el contrario si requieren de una inversión; aunque generar ciencia reproducible lo vale, tambien es importante considerar que no todo el mundo tiene la misma facilidad de acceso a la herramientas necesarias para llevar a cabo este propósito, de ahi que otra parte fundamental para que la ciencia sea reproducible, sea no solo el conocimiento sino que estas herramientas sean de libre acceso.
+
++ **Articulo ¿ Por qué usar GitHub? Diez pasos para disfrutar de GitHUb y no morir en el intento. **
+
+En este apartado se tratara de comprobar que quedaron claros los conceptos mas importantes asociados al respositorio GitHub y como evidencia del uso y la correcta implementacion del mismo, el script de este documento mas los documentos anexos necesarios para su correcta ejecucion puede descargarse del siguiente link **[https://github.com/PaulaRozo-C/Programacion_avanzada/tree/master/Practica%2002]**.  
+
+Por otro lado comentar a importancia de ciertos conceptos con respeto a GitHub:
+
++ Repositorio:  Un repositorio es un directorio donde van a estar los archivos que git puede monitorear.. Para crear un repositorio entramos en nuestra cuenta de GitHub y vamos a la pestaña `Repositories` y clicamos en `New`. El repositorio puede ser público o privado.
+
++ Rama: Una rama se usará para hacer una prueba experimental. la rama principal es master, pero si queremos trabajar en una nueva, la crearemos a partir de `create or find a new branch` y la usaremos para experimentar, sin modificar la rama master. Esto va a provocar que si la experimentación ha sido óptima, se añadirá al código principal.
+
++ Pull and push: Una vez que el archivo se ha realizado, para subirlo a la nube de GIT, habrá que darle a _commit/Push_, en cambio para bajarlo de la nube, solo se necesitará darle a _pull_.
+
++ Fork:  Los _‘forks’_ nos sirven para hacer una copia de repositorios ajenos. Busquemos por GitHub algún repositorio que nos interese. En la parte derecha superior veremos un botón de _Fork_. Tras pulsarlo vamos a tener un repositorio igual a éste en nuestra cuenta de GitHub, sobre el que podemos hacer cuantos cambios queramos.
+
++ **Las opciones de sintaxis básicas de Pandoc Markdown:**
+
++ Texto plano.
+
++ _Cursiva_.
+
++ __Negrita__.
+
++ Superindice^3^
+
++ ~~Tachado~~
+
++ Link: <https://uah.blackboard.com/ultra/courses/_19456_1/cl/outline>
+
++ Ecuacion en linea de Texto. $A = \pi*r^{2}$ 
+
++ Ecuación en código
+
+```{r, eval = TRUE, echo = TRUE, include=TRUE}
+x = 2*3^{2}
+print (x)
+```
+  
++ **Uso de argumentos para la configuración de texto y de código en R Markdown**
+
++ Peguen las palabas “Hola” y “mundo” en una línea nueva:  
+
+```{r, eval = TRUE, echo = TRUE}
+a <- "hola"
+b <- "mundo"
+c <- paste (a,b)
+
+```
++ Peguen las palabas “Hola” y “mundo” en la misma línea de código: `r paste (a,b)`   
+
+```{r, eval = TRUE, echo = TRUE}
+paste (a,b)
+
+```
+
++ Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R:  
+
+```{r, eval = FALSE, echo = TRUE, include=TRUE}
+paste ("hola", "mundo")
+```
+
++ Peguen las palabas “Hola” y “mundo” en una línea nueva de código y que no muestren el resultado de R y que no se muestre en el documento de Word:
+
+```{r, eval = FALSE, echo = FALSE, include=FALSE}
+paste ("hola", "mundo")
+```
+
++ **Muestra una tabla y una gráfica en el archivo de salida, tomando alguno de los datos que vienen en R o alguno de sus paquetes.**  
+
+En este apartado se dejara en evidencia lo aprendido en la elaboración de tablas, graficos entre otras cosas haciendo uso de la data __airquality__ de R.
+
+Esta data alamcena datos de radiacion solar, tempratura, viento y ozono pra cada dia de los meses de mayo a septiembre. Estos meses estan en el data frame original representados con los numeros del 5 al 9, por eso, en primer lugar se actualiza la tabla asignandole el nombre correspondiente al mes para mejor comprension con la realización de un factor y posteriormente para la creación de la tabla, se hace un resumen de la descripcion de una de las variables que componen la data, en este caso se selecconó la temperatura y se obtiene, la mediana, la media, la minima, la mazima y la desviación estandar y se almacena en la siguiente tabla:  
+
+
+```{r, echo=FALSE, eval=TRUE, error=TRUE, warning=FALSE, message=FALSE}
+library(plyr)
+library(flextable)
+library(officer)
+
+
+data(airquality)
+
+# Convertir el numero de mes al mes que corresponde para entender mas la tabla
+Month1 <- factor(x = airquality$Month, levels = 5:9, 
+                labels = c("Mayo", "Junio", "Julio", "Agosto", "Septiembre"))
+
+
+# Actualizacion de la columa mes
+airquality$Month <- Month1
+
+
+Descrip_Temp <- ddply(.data = airquality, .(Month), 
+       summarize,
+       Mediana =  quantile(x = Temp, probs = c(0.50)),
+       Media =  mean(Temp),
+       Desviacion_estandar =  sd(Temp),
+       Minima =  min(Temp),
+       Maximo =  max(Temp))
+
+
+# Creacion de la tabla
+
+tabla1 <- flextable(Descrip_Temp) 
+tabla1 <- align(tabla1, align = "center", part= "header") 
+tabla1 <- align(tabla1, align = "center", part= "body")
+tabla1 <- colformat_num(tabla1, col_keys = c("Month", "Mediana", "Media", "Desviacion_estandar", "Minima","Maximo"), digits = 1)
+tabla1 <- bg(tabla1, bg = "dodgerblue4", part = "header")
+tabla1 <- color(tabla1, color = "white", part = "header")
+tabla1 <- autofit(tabla1)
+tabla1  
+
+```  
+
+  
+  
+  
+Por otro lado, de este mismo data frame se realizan unos graficos de puntos para ver el comportamiento de la temperatura en relación al viento y determinar si existe correlación entre las dos variables, para esto con el fin de evitar que el codigo sea largo y repetitivo se divide el data frame con la funcion __split.data.frame__ y se obiene una lista de dataframes, seguido a esto se crea una funcion que grafique las favirables y finalmente con la funcion __lappy__ se obtienen los graficos correpondientes para mes como se puede ver en las siguientes imagenes:
+
+
+```{r eval=TRUE, echo=FALSE, error=TRUE, fig.align='center', fig.height=3, fig.width=8, fig,message=FALSE, warning=FALSE}
+library(ggplot2)
+
+list_data <- split.data.frame(x = airquality, f = airquality$Month,
+                              drop = TRUE)
+# str(list_data)
+
+
+# Para poder graficar la tempratura y viento se crea una funcion
+
+
+graficador <- function(df){
+    g <- ggplot(df, aes(x=Wind, y=Temp, colour=Day))
+    g <- g + geom_point() + facet_grid(~ Month) + labs(x = "Viento", y = "Temperatura", title = " Viento vs Temperatura", color = "Dia")   
+    return(g)
+}
 
 
 
+lapply(X = list_data, FUN = graficador)
 
+```
 
+Otra forma de determinar si existe correlación de las variables viento y temperatura es analizar los valores de una menera global, es decir, todos los meses a la vez, obtenemos entonces que la correlación entre las variables es de  `r cor(airquality$Wind, airquality$Temp)`, lo que nos dice que existe una correlación negativa, es decir a mayor temperatura, menor es el viento.
 
 
  

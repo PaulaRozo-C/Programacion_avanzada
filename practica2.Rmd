@@ -1,0 +1,61 @@
+---
+title: "Untitled"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GIT 
+
+2.3. Lee “¿Por qué usar GitHub? Diez pasos para disfrutar de GitHub y no morir en el intento”. Comprueba que tienes “claro” los siguientes conceptos: 
+
++ ¿Qué es un __repositorio__? Un repositorio es un directorio donde van a estar los archivos que git puede monitorear.. Para crear un repositorio entramos en nuestra cuenta de GitHub y vamos a la pestaña `Repositories` y clicamos en `New`. El repositorio puede ser público o privado.
++ ¿Qué es un __rama__? Una rama se usará para hacer una prueba experimental. la rama principal es master, pero si queremos trabajar en una nueva, la crearemos a partir de `create or find a new branch` y la usaremos para experimentar, sin modificar la rama master. Esto va a provocar que si la experimentación ha sido óptima, se añadirá al código principal. 
++ ¿Qué es __Pull and push__? Una vez que el archivo se ha realizado, para subirlo a la nube de GIT, habrá que darle a _commit/Push_, en cambio para bajarlo de la nube, solo se necesitará darle a _pull_.
++ ¿Que es __Fork__?Los _‘forks’_ nos sirven para hacer una copia de repositorios ajenos. Busquemos por GitHub algún repositorio que nos interese. En la parte derecha superior veremos un botón de _Fork_. Tras pulsarlo vamos a tener un repositorio igual a éste en nuestra cuenta de GitHub, sobre el que podemos hacer cuantos cambios queramos.
+
+### 2.4. RMarkdown. Genera un documento de html que contenga
+
+las opciones de sintaxis básicas de Pandoc Markdown:
+
++ Texto plano.
+
++ _Cursiva_.
+
++ __Negrita__.
+
++ Superindice^3^
+
++ ~~Tachado~~
+
++ Link: <https://uah.blackboard.com/ultra/courses/_19456_1/cl/outline>
+
++ Ecuacion en linea de Texto. $A = \pi*r^{2}$ 
+
+
++ Ecuacion en bloque.
+```{r, eval = TRUE, echo = FALSE, include=TRUE}
+x = 2*3^{2}
+print (x)
+```
+
++ Diferentes encabezados. Sería como acontinuación
+
+#### Título 1
+
+
+```{r, eval = TRUE, echo = FALSE}
+a <- "hola"
+b <- "mundo"
+c <- paste (a,b)
+
+```
+
+ESTO ES PARA DIFERENCIAR ALGO, SE PUEDE BORRAR
+
+```{r, eval = TRUE, echo = FALSE, include=FALSE}
+paste ("hola", "mundo")
+```
+

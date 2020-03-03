@@ -1,0 +1,223 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Practica 02},
+  pdfauthor={Paula Rozo Coy - Pablo Aguilera Capitan},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Practica 02}
+\author{Paula Rozo Coy - Pablo Aguilera Capitan}
+\date{29/2/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{practica-2---github-y-ciencia-reproducible}{%
+\section{Practica 2 - GitHub y Ciencia
+Reproducible}\label{practica-2---github-y-ciencia-reproducible}}
+
+\hypertarget{objetivo-general}{%
+\section{OBJETIVO GENERAL}\label{objetivo-general}}
+
+Evidenciar los conocimientos adquiridos relacionados principalmente con
+el funcionamiento de la libreria R Markdown.
+
+\hypertarget{objetivos-especificos}{%
+\section{OBJETIVOS ESPECIFICOS}\label{objetivos-especificos}}
+
+\begin{itemize}
+\item
+  Reconocer la importancia de la reproducibilidad de la ciencia y los
+  elementos del flujo de trabajo reproducible a traves de la comprension
+  del articulo \textbf{Ciencia reproducible: qué, por qué, cómo}.
+\item
+  Hacer uso del repositorio GitHub y entender su importancia
+  principalmente en el control de versiones y trabajo integrado por
+  medio del articulo \textbf{¿Porqué usar GitHub' Diez pasos para
+  disfrutar de GitHub y no morir en el intento}.
+\item
+  Desarrollar ligereza en el uso de los diferentes argumentos de R
+  Markdown para la configuracion de lo que se desea mostrar tanto de
+  texto como de codigo en el documento de salida final.
+\end{itemize}
+
+\hypertarget{desarrollo-de-la-practica}{%
+\section{DESARROLLO DE LA PRACTICA}\label{desarrollo-de-la-practica}}
+
+Para el desarrollo de la presente practica se utiliza el lenguaje de
+programación R Core Team (2019), y el documento se genera haciendo uso
+de la librería R Markdown. Cabe resaltar que tanto la portada, el
+encabezado y el pie de pagina se ajustan en el documento final de word
+previo a exportarlo como PDF.
+
+En primer lugar se crea un documento en word nombrado
+\textbf{docx\_template\_01} en el que se configura todo el estilo del
+documento de salida, adicional a esto se incluyen las referencias de los
+dos articulos propuestos por la guia en el archivo de texto
+\textbf{refs.bib}.
+
++\textbf{\emph{Articulo Ciencia reproducible: qué, por qué, cómo. }}
+
+En este apartado se dara respuesta a las preguntas planetadas en la guia
+en relación al articulo en mención.
+
++¿ Que es la ciencia reproducible?
+
+La ciencia reproducible hace referencia a la posibilidad de replicar el
+mismo estudio con nuevos datos, es decir, haciendo uso de los mismos
+modelos estadisticos, mismos calculos, y obteniendo en teoria la misma
+cantidad de resultados representados en el mismo numero de tablas y
+figuras. Sin embargo, hoy en dia la mayoria de los articulos y
+documentos cientificos no son reproducibles dado que trazar de una
+manera clara el proceso de obtencion de los resultados resulta bastante
+complicado si no se cuenta con con un codigo - \textbf{Scripts} - que
+permita la reproducibilidad de los mismos.
+
++¿En que casos se consigue 100\% de la reprodicibilidad?
+
+Aunque dificilmente se pueda conseguir 100\% de la roproducibilidad de
+un estudio, el texto menciona una serie de elementos que conforma la
+transicion hacia la reproducibilidad, la utilizacion inicial de un
+codigo (``scripts'') para el análisis de los datos, repositorios de
+datos en nube para almacenar, versionar y compratir los datos, la
+estructuración de un documento dinamico haciendo uso de herramientas
+como Rmarkdown o Ipython, y finalmenye la incorporacion a un repositorio
+para conservar un resgistro del desarrollo del proyecto y facilitar la
+participacion, en este prden respectivamente, puede llegar a ser el
+flujo dinamico antes mencionado para lograr una plena reproducibilidad
+de la ciencia. Lo mas complejo en todos estos casos es contar con el
+manejo de estas herramientas en los diferentes campos de la ciencia.
+
++¿Cuales de los beneficios que se sugieren son considerados mas
+importantes para nosotros como equipo de trabajo?
+
+Creemos que los beneficios enumerados por los autores del articulo estan
+todos interrelacionados de algun modo, sin embargo, hay dos de estos que
+consideramos resaltan y denotan la importania de realizar ciencia
+reproducible, el primero es que \textbf{``La utilización de código
+permite la automatización: ejecución de tareas repetitivas sin
+esfuerzo''}, este sin duda permite reproducir los mismos calculos y
+analisis no solo reduciendo el esfuerzo si no asegurando que los cambios
+que se dan en los resultados por el cambio de metodologias utilizadas
+incluso con los mismos datos se reduzca completamente, adicional a esto
+es importante mencionar que la automatizacion de la lectura de datos
+permite analizarlos incluso cuando no se tiene una comprension del 100\%
+de la metodologia utilizada, lo que hace a la ciencia mas accesible y al
+alcance de todas las areas de estudio. En segundo lugar se considra
+dentro de estos beneficios la \textbf{``Reducción drástica del riesgo de
+errores''}, en primer lugar porque auqnue no se garaniza que los
+resultados obtenidos una vez se replica el estudio sean correctos si
+evita que se sumen mas errores a los ya existentes, es decir indiferente
+al numero de veces que se replique el estudio no se existen errores
+acumulados por otro lado como lo menciona el texto se abren nuevas
+lineas de colaboración y permite que los erreres existentes tengan la
+oportunidad de ser corregidos mas rapidamente por alguien que sea aaun
+mas experto en el tema en cuestión.
+
++¿Porque no hace todo el mundo ciencia reproducible?
+
+Como bien lo menciona (CITA DE ARTICULO), desarrollar estudios
+plenamente reproducibles implica un esfuerzo incial adicional de
+aprendizaje de diferentes areas de estudio, como lo son el manejo de
+lenguajes de programación, de bases de datos, de repositorios entre
+otras cosas, y este esfuerzo implica dedicar un tiempo considerable a
+aprender diciplinas que a la largar pueden no traer un beneficio
+economico para quien las aprende y muy por el contrario si requieren de
+una inversión; aunque generar ciencia reproducible lo vale, tambien es
+importante considerar que no todo el mundo tiene la misma facilidad de
+acceso a la herramientas necesarias para llevar a cabo este propósito,
+de ahi que otra parte fundamental para que la ciencia sea reproducible,
+sea no solo el conocimiento sino que estas herramientas sean de libre
+acceso.
+
++\textbf{\emph{Articulo ¿ Por qué usar GitHub? Diez pasos para disfrutar
+de GitHUb y no morir en el intento. }}
+
+En este apartado se tratara de comprobar que quedaron claros los
+conceptos mas importantes asociados al respositorio GitHub y como
+evidencia del uso y la correcta implementacion del mismo, el script de
+este documento mas los documentos anexos necesarios para su correcta
+ejecucion puede descargarse del siguiente link
+\textbf{\url{https://github.com/PaulaRozo-C/Programacion_avanzada/tree/master/Practica\%2002}}.
+
+Por otro lado comentar a importancia de ciertos conceptos con respeto a
+GitHub:
+
++Repositorio:
+
++Rama:
+
++Pull and push:
+
++Fork:
+
++\textbf{\emph{Uso de argumentos para la configuración de texto y de
+código en R Markdown}}
+
++Peguen las palabas ``Hola'' y ``mundo'' en una línea nueva:
+
++Peguen las palabas ``Hola'' y ``mundo'' en la misma línea de código:
+
++Peguen las palabas ``Hola'' y ``mundo'' en una línea nueva de código y
+que no muestren el resultado de R:
+
++Peguen las palabas ``Hola'' y ``mundo'' en una línea nueva de código y
+que no muestren el resultado de R y que no se muestre en el documento de
+Word:
+
+\end{document}
